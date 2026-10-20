@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taskly – To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <h1>Taskly</h1>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+      <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
+  <p class="date" id="date"></p>
+
+  <div class="progress"><div id="bar"></div></div>
+  <div class="pstat"><span id="pText">0 of 0 completed</span><span id="pPct">0%</span></div>
+
+  <div class="add-row">
+    <input id="input" type="text" placeholder="Add a new task…" aria-label="New task" autocomplete="off" maxlength="200">
+    <button id="addBtn" type="button" aria-label="Add task">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Add</span>
+    </button>
+  </div>
+
+  <div class="filters" id="filters" role="tablist">
+    <button type="button" data-f="all" class="active">All</button>
+    <button type="button" data-f="active">Active</button>
+    <button type="button" data-f="done">Completed</button>
+  </div>
+
+  <ul id="list"></ul>
+
+  <div class="foot">
+    <span id="count"></span>
+    <button id="clearBtn" type="button">Clear completed</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
